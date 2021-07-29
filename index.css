@@ -101,11 +101,17 @@ h1 {
   width: 25%;
   justify-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 #method_div input {
-  margin-left: 2px;
+  margin-left: 5px;
 }
+
+#custom_label {
+  margin-left: 20px;
+}
+
 #categories_div {
   flex-direction: column;
 }
