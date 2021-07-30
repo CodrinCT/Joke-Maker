@@ -20,11 +20,9 @@ const twoPart = document.getElementById('twopart');
 const subBtn = document.getElementById('btn');
 const jokemacker_form = document.getElementById('jokemacker_form');
 const body = document.getElementById('body');
-// const joke_div = document.getElementById('joke_div');
 const joke_div = document.createElement('div');
 const par =  document.createElement('p')
 par.id='joke_par'
-
 
 let categoriesArr = [];
 let flagsArr = [];
@@ -55,7 +53,6 @@ Programming.addEventListener('click',()=>{
      let index = categoriesArr.indexOf(ProgrammingValue)
      categoriesArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -69,7 +66,6 @@ Misc.addEventListener('click',()=>{
      let index = categoriesArr.indexOf(MiscValue)
      categoriesArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -83,7 +79,6 @@ Dark.addEventListener('click',()=>{
      let index = categoriesArr.indexOf(DarkValue)
      categoriesArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -97,7 +92,6 @@ Pun.addEventListener('click',()=>{
      let index = categoriesArr.indexOf(PunValue)
      categoriesArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -111,7 +105,6 @@ Spooky.addEventListener('click',()=>{
      let index = categoriesArr.indexOf(spookyValue)
      categoriesArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -138,7 +131,6 @@ nsfw.addEventListener('click',()=>{
      let index = flagsArr.indexOf(nsfwValue)
      flagsArr.splice(index);
         console.log(categoriesArr);
-
     }
 })
 
@@ -152,7 +144,6 @@ religious.addEventListener('click',()=>{
      let index = flagsArr.indexOf(religiousValue)
      flagsArr.splice(index);
         console.log(flagsArr);
-
     }
 })
 
@@ -166,7 +157,6 @@ political.addEventListener('click',()=>{
      let index = flagsArr.indexOf(politicalValue)
      flagsArr.splice(index);
         console.log(flagsArr);
-
     }
 })
 
@@ -180,7 +170,6 @@ racist.addEventListener('click',()=>{
      let index = flagsArr.indexOf(racistValue)
      flagsArr.splice(index);
         console.log(flagsArr);
-
     }
 })
 
@@ -194,7 +183,6 @@ sexist.addEventListener('click',()=>{
      let index = flagsArr.indexOf(sexistValue)
      flagsArr.splice(index);
         console.log(flagsArr);
-
     }
 })
 
@@ -238,18 +226,6 @@ twoPart.addEventListener('click',()=>{
 })
 
 subBtn.addEventListener('click',()=>{
-    // if(any.checked){
-    //     apiUrl = 'https://v2.jokeapi.dev/joke/';
-    //     finalUrl = apiUrl + 'Any';
-    //     jokemacker_form.action = finalUrl;
-    // }else if(custom.checked){
-    // apiUrl='https://v2.jokeapi.dev/joke/';
-    // finalUrl = apiUrl+categoriesArr.join(',')+'?'+flagsArr.join(',')+'&'+typeArr.join(',');
-    // jokemacker_form.action = finalUrl;
-    // }else{
-    //     alert('check one of the method types please!')
-    // }
-
     if(any.checked){
         apiUrl = 'https://v2.jokeapi.dev/joke/';
         finalUrl = apiUrl + 'Any';
@@ -258,14 +234,14 @@ subBtn.addEventListener('click',()=>{
              return response.json();
         })
         .then(data =>{
-            const {category, type, joke,setup, delivery} = data;
-
+            const {category, type, joke, flags,setup, delivery} = data;
             if(type =='single'){
             joke_div.id = 'joke_div';
            joke_div.appendChild(par);
             body.appendChild(joke_div);
            par.innerHTML=`<h2>Category</h2><p>${category}</p><br><h2>Type</h2><p>${type}</p><br><h2>Joke</h2><p>${joke}</p>`;
             }
+            // <h2>Flags</h2><p>${trueFlags.join(`<br>`)}</p><br></br>
            if(type=='twopart'){
             joke_div.id = 'joke_div';
            joke_div.appendChild(par);
@@ -283,10 +259,6 @@ subBtn.addEventListener('click',()=>{
         })
         .then(data =>{
             const {category, type, joke, flags ,setup, delivery} = data;
-            const {nsfw, religious, political, racist, sexist, explicit} = flags;
-            let flagsArrReturned=[]
-            flagsArrReturned.push([nsfw, religious, political, racist, sexist, explicit]);
-
             if(type =='single'){
             joke_div.id = 'joke_div';
            joke_div.appendChild(par);

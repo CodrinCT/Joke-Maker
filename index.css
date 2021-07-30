@@ -59,9 +59,8 @@ h1 {
   border-radius: 8px;
   padding: 10px;
   transition: ease-in;
-  transform-origin: left;
+  transform-origin: top;
   transition-duration: 0.5s;
-  transform-style: flat;
   margin: 20px;
   border-color: black;
   border-width: 3px;
