@@ -48,11 +48,9 @@ Programming.addEventListener('click',()=>{
     if(Programming.checked){
         ProgrammingValue = Programming.value;
         categoriesArr.push(ProgrammingValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(ProgrammingValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -61,11 +59,9 @@ Misc.addEventListener('click',()=>{
     if(Misc.checked){
         MiscValue = Misc.value;
         categoriesArr.push(MiscValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(MiscValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -74,11 +70,9 @@ Dark.addEventListener('click',()=>{
     if(Dark.checked){
         DarkValue = Dark.value;
         categoriesArr.push(DarkValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(DarkValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -87,11 +81,9 @@ Pun.addEventListener('click',()=>{
     if(Pun.checked){
         PunValue = Pun.value;
         categoriesArr.push(PunValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(PunValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -100,11 +92,9 @@ Spooky.addEventListener('click',()=>{
     if(Spooky.checked){
         spookyValue = Spooky.value;
         categoriesArr.push(spookyValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(spookyValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -113,11 +103,9 @@ Christmas.addEventListener('click',()=>{
     if(Christmas.checked){
         ChristmasValue = Christmas.value;
         categoriesArr.push(ChristmasValue)
-        console.log(categoriesArr);
     }else{
      let index = categoriesArr.indexOf(ChristmasValue)
      categoriesArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -126,11 +114,9 @@ nsfw.addEventListener('click',()=>{
     if(Programming.checked){
         nsfwValue = nsfw.value;
         flagsArr.push(nsfwValue)
-        console.log(categoriesArr);
     }else{
      let index = flagsArr.indexOf(nsfwValue)
      flagsArr.splice(index);
-        console.log(categoriesArr);
     }
 })
 
@@ -139,11 +125,9 @@ religious.addEventListener('click',()=>{
     if(religious.checked){
       religiousValue = religious.value;
         flagsArr.push(religiousValue)
-        console.log(flagsArr);
     }else{
      let index = flagsArr.indexOf(religiousValue)
      flagsArr.splice(index);
-        console.log(flagsArr);
     }
 })
 
@@ -152,11 +136,9 @@ political.addEventListener('click',()=>{
     if(political.checked){
         politicalValue = political.value;
         flagsArr.push(politicalValue)
-        console.log(flagsArr);
     }else{
      let index = flagsArr.indexOf(politicalValue)
      flagsArr.splice(index);
-        console.log(flagsArr);
     }
 })
 
@@ -165,11 +147,9 @@ racist.addEventListener('click',()=>{
     if(racist.checked){
         racistValue = racist.value;
         flagsArr.push(racistValue)
-        console.log(flagsArr);
     }else{
      let index = flagsArr.indexOf(racistValue)
      flagsArr.splice(index);
-        console.log(flagsArr);
     }
 })
 
@@ -178,11 +158,9 @@ sexist.addEventListener('click',()=>{
     if(sexist.checked){
         sexistValue = sexist.value;
         flagsArr.push(sexistValue)
-        console.log(flagsArr);
     }else{
      let index = flagsArr.indexOf(sexistValue)
      flagsArr.splice(index);
-        console.log(flagsArr);
     }
 })
 
@@ -191,11 +169,9 @@ explicit.addEventListener('click',()=>{
     if(explicit.checked){
         explicitValue = explicit.value;
         flagsArr.push(explicitValue)
-        console.log(flagsArr);
     }else{
      let index = flagsArr.indexOf(explicitValue)
      flagsArr.splice(index);
-        console.log(flagsArr);
     }
 })
 
@@ -204,11 +180,9 @@ single.addEventListener('click',()=>{
     if(single.checked){
         singleValue = single.value;
         typeArr.push(singleValue)
-        console.log(typeArr);
     }else{
      let index = typeArr.indexOf(singleValue)
      typeArr.splice(index);
-        console.log(typeArr);
     }
 })
 
@@ -217,11 +191,9 @@ twoPart.addEventListener('click',()=>{
     if(twoPart.checked){
         twopartValue = twoPart.value;
         typeArr.push(twopartValue)
-        console.log(typeArr);
     }else{
     let index = categoriesArr.indexOf(twopartValue)
     typeArr.splice(index);
-    console.log(typeArr);
     }
 })
 
@@ -252,7 +224,6 @@ subBtn.addEventListener('click',()=>{
     }else if(custom.checked){
         apiUrl = 'https://v2.jokeapi.dev/joke/';
         finalUrl = `${apiUrl}${categoriesArr.join(',')}?type=${typeArr.join(',')}&flags=${flagsArr.join(',')}`;
-        console.log(finalUrl);
         fetch(finalUrl)
         .then(response=>{
             return response.json();
