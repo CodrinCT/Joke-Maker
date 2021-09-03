@@ -142,7 +142,7 @@ h1 {
   align-self: center;
   text-decoration-line: underline;
   text-decoration-thickness: 5px;
-  text-decoration-style: wavy;
+  text-decoration-style: dashed;
   text-decoration-color: teal;
   text-underline-offset: 6px;
 }
@@ -167,7 +167,7 @@ h1 {
   align-self: center;
   text-decoration-line: underline;
   text-decoration-thickness: 5px;
-  text-decoration-style: wavy;
+  text-decoration-style: dashed;
   text-underline-offset: 6px;
   text-decoration-color: teal;
 }
